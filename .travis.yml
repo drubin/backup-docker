@@ -1,0 +1,8 @@
+language: bash
+services: docker
+
+script:
+  - travis_retry docker build -t "backup" .
+
+after_script:
+  - docker images
